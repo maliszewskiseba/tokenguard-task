@@ -18,7 +18,7 @@ interface MainPageProps {}
 const MainPage = ({}: MainPageProps) => {
   const [loading, setLoading] = useState(true);
   const [graphsFoldersData, setGraphsFoldersData] = useState<
-    graphFolderInterface[] | unknown
+    graphFolderInterface[]
   >([]);
 
   const router = useRouter();
@@ -28,8 +28,7 @@ const MainPage = ({}: MainPageProps) => {
   }, []);
 
   const fetchData = async () => {
-    const fetchedFolders: graphFolderInterface | unknown =
-      await simulateFetch();
+    const fetchedFolders: graphFolderInterface | any = await simulateFetch();
 
     setGraphsFoldersData(fetchedFolders);
     setLoading(false);

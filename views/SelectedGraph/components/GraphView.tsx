@@ -20,7 +20,7 @@ import HeaderRow from "@/GenericComponents/HeaderRow/HeaderRow";
 
 interface GraphViewProps {
   graphData: formattedGraphDataInterface | unknown;
-  handleChangeGranularity: (option: { label: string; value: string }) => void;
+  handleChangeGranularity: any;
   granularityOptions: { label: string; value: string }[];
   granularity: string;
 }
